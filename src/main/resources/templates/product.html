@@ -33,7 +33,7 @@
 						<th>Prouct ID</th>
 						<th>Name</th>
 						<th>Desciprion</th>
-						<th>CategoryId</th>
+						<th>Category</th>
 						<th>manufacturer</th>
 					</tr>
 				</thead>
@@ -42,8 +42,8 @@
 						<td class="productid" th:text="${product.id}"></td>
 						<td class="productname" th:text="${product.name}"></td>
 						<td class="productname" th:text="${product.description}"></td>
-						<td th:text="${product.manufacturer.name}"></td>
 						<td th:text="${product.category.categoryName}"></td>
+						<td th:text="${product.manufacturer.name}"></td>
 					</tr>
 				</tbody>
 			</table>
