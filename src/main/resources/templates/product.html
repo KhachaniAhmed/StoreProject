@@ -32,6 +32,7 @@
 					<tr class="success">
 						<th>Prouct ID</th>
 						<th>Name</th>
+						<th>Desciprion</th>
 						<th>CategoryId</th>
 						<th>manufacturer</th>
 					</tr>
@@ -40,12 +41,14 @@
 					<tr id="products" class="success">
 						<td class="productid" th:text="${product.id}"></td>
 						<td class="productname" th:text="${product.name}"></td>
+						<td class="productname" th:text="${product.description}"></td>
 						<td th:text="${product.manufacturer.name}"></td>
 						<td th:text="${product.category.categoryName}"></td>
 					</tr>
 				</tbody>
 			</table>
 			<a class="btn btn-danger" th:href="@{/products}">Cancel</a>
+			<a class="btn btn-danger" th:href="${product.image}">Image Of Product</a>
 		</div>
 	</div>
 </body>

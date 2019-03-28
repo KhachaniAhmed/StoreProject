@@ -13,11 +13,12 @@ import com.store.services.CategorySerice;
 import com.store.services.ManufacturerService;
 
 @SpringBootApplication
-public class StroeProjectApplication implements CommandLineRunner  {
+public class StroeProjectApplication implements CommandLineRunner {
 	@Autowired
-     private CategorySerice categorySerice;
+	private CategorySerice categorySerice;
 	@Autowired
 	private ManufacturerService manufacturerService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(StroeProjectApplication.class, args);
 	}
@@ -32,6 +33,7 @@ public class StroeProjectApplication implements CommandLineRunner  {
 //		Stream.of("manuf1","manuf2","manuf3").forEach(cat->{
 //			manufacturerService.save(new Manufacturer(null, cat));
 //		});
+
 	}
 
 }

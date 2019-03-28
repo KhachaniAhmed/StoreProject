@@ -29,12 +29,22 @@
 			<div class="panel-body">
 				<form th:object="${product}" th:action="@{../save}" action="#"
 					method="post">
+					<input type="hidden" th:field="*{id}">
 					<div class="form-group">
 						<label for="name">Name</label> <input type="text"
 							class="form-control" id="name" th:field="*{name}"
 							placeholder="Name" />
 					</div>
-					<input type="hidden" th:field="*{id}">
+					<div class="form-group">
+						<label for="name">Description</label> <input type="text"
+							class="form-control" id="description" th:field="*{description}"
+							placeholder="Description" />
+					</div>
+					<div class="form-group">
+						<label for="name">Image</label> <input type="text"
+							class="form-control" id="image" th:field="*{image}"
+							placeholder="Image Link" />
+					</div>
 					<div class="form-group">
 						<label>Category</label> <select class="form-control"
 							th:field="*{category.categoryName}" style="width: 145px">
@@ -45,9 +55,9 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label>Category</label> <select class="form-control"
+						<label>Manufactuer</label> <select class="form-control"
 							th:field="*{manufacturer.name}" style="width: 145px">
-							<option value="">Select Category</option>
+							<option value="">Select Manufactuer</option>
 							<option th:each="manufactuer : ${manufacturerList}"
 								th:value="${manufactuer.name}" th:text="${manufactuer.name}">
 							</option>

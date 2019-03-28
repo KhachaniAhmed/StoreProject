@@ -33,36 +33,15 @@ public class Product {
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "quantity")
-    private Integer quantity;
-
-    @Column(name = "price")
-    private Float price;
-
-    @Column(name = "created_at", updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
-
-    @Column(name = "updated_at")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedAt;
-
+    @Column(name = "description")
+    private String description;
+    @Column(name = "image")
+    private String image;
     @ManyToOne
     private Category category;
   
     @ManyToOne
     private Manufacturer manufacturer;
     
-    @PrePersist
-    public void onPrePersist() {
-        this.createdAt = new Date();
-        this.updatedAt = new Date();
-    }
-
-    @PreUpdate
-    public void onPreUpdate() {
-        this.updatedAt = new Date();
-    }
 
 }
